@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/blue-sky-12138/redrock-second-term/compare/v1.2.0...v1.3.0) (2021-03-29)
+
+
+### Features
+
+* **homework-3:** the third homework is finished ([1165820](https://github.com/blue-sky-12138/redrock-second-term/commit/1165820d9c6b5fa7e6d926094f4d9d0474c3b74e))
+
 ## [1.2.0](https://github.com/blue-sky-12138/redrock-second-term/compare/v1.1.0...v1.2.0) (2021-03-25)
 
 

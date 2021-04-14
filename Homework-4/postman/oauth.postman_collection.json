@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "ba41b489-5e2d-4d4f-9b7d-3bb77d69e1fe",
+		"name": "oauth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "oauth认证——获取认证码",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/serve/oauth/authorize?response_type=code&client_id=123456&scope=read&state=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"serve",
+						"oauth",
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "code"
+						},
+						{
+							"key": "client_id",
+							"value": "123456"
+						},
+						{
+							"key": "scope",
+							"value": "read"
+						},
+						{
+							"key": "redirect_url",
+							"value": "http://localhost:8000/serve/oauth/callback",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "oauth认证——获取token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/serve/oauth/token?grant_type=authorization_code&client_id=123456&scope=read&client_secret=RedRock&code=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"serve",
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "client_id",
+							"value": "123456"
+						},
+						{
+							"key": "scope",
+							"value": "read"
+						},
+						{
+							"key": "client_secret",
+							"value": "RedRock"
+						},
+						{
+							"key": "code",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "oauth认证——更新token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/serve/oauth/token?code=bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWRSb2NrIiwiaWF0IjoiMTYxODM5MDI5MSIsImV4cCI6IjE2MTg5OTUwOTEiLCJzdWIiOnsiaWQiOjEyMzQ1NiwidXNlcm5hbWUiOiJyZWZyZXNoX3Rva2VuIn19.GJ19cAv0S3T2cKxjuG93YGFvgwGBpp08mPxOYaVJo9g&grant_type=refresh_token&client_id=123456&client_secret=RedRock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"serve",
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSZWRSb2NrIiwiaWF0IjoiMTYxODM5MDI5MSIsImV4cCI6IjE2MTg5OTUwOTEiLCJzdWIiOnsiaWQiOjEyMzQ1NiwidXNlcm5hbWUiOiJyZWZyZXNoX3Rva2VuIn19.GJ19cAv0S3T2cKxjuG93YGFvgwGBpp08mPxOYaVJo9g"
+						},
+						{
+							"key": "grant_type",
+							"value": "refresh_token"
+						},
+						{
+							"key": "client_id",
+							"value": "123456"
+						},
+						{
+							"key": "client_secret",
+							"value": "RedRock"
+						},
+						{
+							"key": "redirect_url",
+							"value": "http://localhost:8000/serve/oauth/callback",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "oauth认证——返回认证码",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/serve/oauth/callback?code=&state=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"serve",
+						"oauth",
+						"callback"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": ""
+						},
+						{
+							"key": "state",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

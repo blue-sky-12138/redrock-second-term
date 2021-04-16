@@ -171,6 +171,7 @@ func TokenCheck() gin.HandlerFunc {
 		if len(h) < 7 {
 			c.JSON(200, "token authentication failed")
 			c.Abort()
+			return
 		}
 
 		token := h[7:]

@@ -1,6 +1,6 @@
 {
   "name": "redrock-second-term",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "A  repository for homework in second term",
   "main": "index.js",
   "scripts": {

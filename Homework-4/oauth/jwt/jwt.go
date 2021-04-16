@@ -167,7 +167,13 @@ func (j *JWT) HS256Encode() {
 
 func TokenCheck() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		token := c.GetHeader("Authorization")[7:]
+		h := c.GetHeader("Authorization")
+		if len(h) < 7 {
+			c.JSON(200, "token authentication failed")
+			c.Abort()
+		}
+
+		token := h[7:]
 		jwt, err := DecodeJWT(token)
 		if err == nil && jwt.Token == token {
 			c.Next()

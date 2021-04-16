@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/blue-sky-12138/redrock-second-term/compare/v1.4.0...v1.4.1) (2021-04-16)
+
+
+### Bug Fixes
+
+* **jwt:token check:** if it can't get token from header, it will break up immediately ([94d1e94](https://github.com/blue-sky-12138/redrock-second-term/commit/94d1e9444f48f09ef231c524e91a0c468a91e32d))
+
 ## [1.4.0](https://github.com/blue-sky-12138/redrock-second-term/compare/v1.3.0...v1.4.0) (2021-04-14)
 
 
